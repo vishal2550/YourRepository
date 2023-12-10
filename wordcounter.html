@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 100wh;
+            
+            display: flex;
+            
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <textarea name="" id="text" cols="80" rows="10"></textarea>
+    </div>
+    <div class="ans">
+        <h3>letter = <span id="first">0</span> </h3>
+        <h3>word = <span id="word">0</span> </h3>
+        <h3>word = <span id="words">0</span> </h3>
+    </div>
+
+    <script>
+        let textarea = document.getElementById("text")
+
+        textarea.addEventListener("input", function () {
+            let text = textarea.value
+            document.getElementById("first").innerHTML = text.length
+            text = text.trim()
+
+            let word = text.split(" ")
+            text 
+
+            let cleanspace = word.filter(function (e) {
+                return e != ""
+                
+            })
+
+            document.getElementById("word").innerHTML = cleanspace.length
+            
+        })
+
+    </script>
+
+
+
+    
+</body>
+</html>
